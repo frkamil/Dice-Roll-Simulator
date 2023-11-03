@@ -79,12 +79,16 @@ function snakeEyes() {
     let die1 = Math.floor(Math.random() * 6) + 1;
     let die2 = Math.floor(Math.random() * 6) + 1;
     total = die1 + die2;
-    if (total > 2) {
+    if (total !== 2) {
       numRolls++;
       let pEl = document.createElement("p");
       pEl.innerHTML = `${die1},${die2} (sum: ${total})`;
       outputEl.appendChild(pEl);
     } else {
+      numRolls++;
+      let pEl = document.createElement("p");
+      pEl.innerHTML = `${die1},${die2} (sum: ${total})`;
+      outputEl.appendChild(pEl);
       break;
     }
   } // Add Results to output element
